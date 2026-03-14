@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router";
 import Swal from "sweetalert2";
+import ContactSection from "./ContactSection";
 
 const UpdateCoffee = () => {
   const coffee = useLoaderData();
@@ -129,6 +130,7 @@ const UpdateCoffee = () => {
           value="Update coffee"
         />
       </form>
+      <ContactSection />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "../../Components/Navbar";
 import NavFooter from "../../Components/NavFooter";
 import ContactSection from "../../Components/ContactSection";
+import AllCoffees from "../../Components/AllCoffees";
 
 const Homepage = () => {
   const initialCoffees = useLoaderData();
@@ -36,6 +37,9 @@ const Homepage = () => {
               setCoffees={setCoffees}
             ></CoffeeCard>
           ))}
+      </div>
+      <div className="max-w-6xl mx-auto my-2 md:my-8 lg:my-12">
+        <AllCoffees />
       </div>
       <div>
         <ContactSection></ContactSection>

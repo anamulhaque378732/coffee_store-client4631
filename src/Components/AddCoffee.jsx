@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import Swal from "sweetalert2";
 import { FaArrowLeft } from "react-icons/fa";
+import ContactSection from "./ContactSection";
 const AddCoffee = () => {
   const handleAddCoffee = (e) => {
     e.preventDefault();
@@ -16,7 +17,6 @@ const AddCoffee = () => {
 
     const formData = new FormData(form);
     const newCoffee = Object.fromEntries(formData.entries());
-    console.log(newCoffee);
 
     // send data to the server
 
@@ -139,6 +139,7 @@ const AddCoffee = () => {
           value="Add coffee"
         />
       </form>
+      <ContactSection></ContactSection>
     </div>
   );
 };
