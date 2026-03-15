@@ -11,7 +11,7 @@ const AllCoffees = () => {
       <h1 className="text-4xl text-center font-bold my-2 py-2">
         Follow On Instagram
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto text-center lg:mt-12 md:mt-4 mt-2">
+      <div className="grid grid-cols-1  justify-center items-center md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto text-center lg:mt-12 md:mt-4 mt-2">
         {images.map((img, index) => (
           <img key={index} src={img} alt="Coffee Cup" />
         ))}

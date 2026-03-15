@@ -12,7 +12,6 @@ const UpdateCoffee = () => {
     const form = e.target;
     const fromData = new FormData(form);
     const updatedCoffee = Object.fromEntries(fromData.entries());
-    // console.log(updatedCoffee);
 
     // send updated coffee to the database
     fetch(`http://localhost:5000/coffees/${_id}`, {

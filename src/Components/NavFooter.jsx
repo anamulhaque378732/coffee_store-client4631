@@ -5,7 +5,7 @@ import properRoasting from "../assets/icons/properRoasting.png";
 
 const NavFooter = () => {
   return (
-    <div className="grid grid-cols-2   my-2 lg:my-5  md:grid-cols-4 gap-5 justify-between lg:px-20">
+    <div className="grid grid-cols-2 mx-2  my-2 lg:my-5  md:grid-cols-4 gap-5 justify-between lg:px-20">
       <div>
         <img src={awesomeAroma} alt="" />
         <h1 className="text-2xl font-medium py-2"> Awesome Aroma </h1>
