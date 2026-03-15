@@ -10,11 +10,9 @@ const SignIn = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
 
     signInUser(email, password)
       .then((result) => {
-        console.log(result.user);
         const signInInfo = {
           email: email,
           lastSignInTime: result.user?.metadata?.lastSignInTime,
@@ -32,9 +30,7 @@ const SignIn = () => {
           .then((res) => {
             return res.json();
           })
-          .then((data) => {
-            console.log("after update", data);
-          });
+          .then((data) => {});
       })
       .catch((error) => {
         Swal.fire({
