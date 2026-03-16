@@ -19,7 +19,7 @@ const SignIn = () => {
         };
         // update last sign to the database
 
-        fetch("http://localhost:5000/users", {
+        fetch(" https://coffee-store-server4631-rjzuxnrhc.vercel.app/users", {
           method: "PATCH",
           headers: {
             "content-type": "application/json",

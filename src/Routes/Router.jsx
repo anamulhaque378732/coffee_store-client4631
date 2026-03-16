@@ -17,7 +17,10 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch("http://localhost:5000/coffees"),
+        loader: () =>
+          fetch(
+            " https://coffee-store-server4631-rjzuxnrhc.vercel.app/coffees",
+          ),
         Component: Homepage,
         hydrateFallbackElement: <p>loading</p>,
       },
@@ -28,7 +31,9 @@ export const router = createBrowserRouter([
       {
         path: "/coffee/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/coffees/${params.id}`),
+          fetch(
+            ` https://coffee-store-server4631-rjzuxnrhc.vercel.app/coffees/${params.id}`,
+          ),
         Component: CoffeeDetails,
         hydrateFallbackElement: <p> Loading</p>,
       },
@@ -36,7 +41,9 @@ export const router = createBrowserRouter([
       {
         path: "/updateCoffee/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/coffees/${params.id}`),
+          fetch(
+            ` https://coffee-store-server4631-rjzuxnrhc.vercel.app/coffees/${params.id}`,
+          ),
         Component: UpdateCoffee,
         hydrateFallbackElement: <p>Loading</p>,
       },
@@ -51,7 +58,8 @@ export const router = createBrowserRouter([
 
       {
         path: "users",
-        loader: () => fetch("http://localhost:5000/users"),
+        loader: () =>
+          fetch(" https://coffee-store-server4631-rjzuxnrhc.vercel.app/users"),
         Component: Users,
         hydrateFallbackElement: <p>loading</p>,
       },

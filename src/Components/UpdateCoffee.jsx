@@ -14,14 +14,17 @@ const UpdateCoffee = () => {
     const updatedCoffee = Object.fromEntries(fromData.entries());
 
     // send updated coffee to the database
-    fetch(`http://localhost:5000/coffees/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
+    fetch(
+      ` https://coffee-store-server4631-rjzuxnrhc.vercel.app/coffees/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
 
-      body: JSON.stringify(updatedCoffee),
-    })
+        body: JSON.stringify(updatedCoffee),
+      },
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
